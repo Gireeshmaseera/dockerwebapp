@@ -4,7 +4,7 @@ version: "3.9"
 services:
   devopsdb:
     container_name: devopsdb
-    image: dbimage
+    image: gireeshmaseera/automation:db
     ports:
       - "3306:3306"
     deploy:
@@ -14,7 +14,7 @@ services:
 
   application:
     container_name: appcontainer
-    image: appimage
+    image: gireeshmaseera/automation:app
     ports:
       - "1234:8080"
     deploy:
