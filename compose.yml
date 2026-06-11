@@ -7,6 +7,8 @@ services:
     image: dbimage
     ports:
       - "3306:3306"
+    deploy:
+     replicas: 3
     networks:
       - mynetwork
 
@@ -15,6 +17,8 @@ services:
     image: appimage
     ports:
       - "1234:8080"
+    deploy:
+     replicas: 3
     networks:
       - mynetwork
     depends_on:
